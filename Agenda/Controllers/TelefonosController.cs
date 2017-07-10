@@ -38,6 +38,7 @@ namespace Agenda.Controllers
         // GET: Telefonos/Create
         public ActionResult Create()
         {
+            ViewBag.Contactos = db.Contactos.ToList();
             return View();
         }
 
@@ -46,7 +47,7 @@ namespace Agenda.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Numero,Nombre")] Telefono telefono)
+        public ActionResult Create([Bind(Include = "Id,Numero,Nombre,ContactoId")] Telefono telefono)
         {
             if (ModelState.IsValid)
             {
@@ -54,7 +55,7 @@ namespace Agenda.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.Contactos = db.Contactos.ToList();
             return View(telefono);
         }
 
