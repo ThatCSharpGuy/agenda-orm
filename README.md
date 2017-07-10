@@ -7,3 +7,4 @@
  5. Controllers y Vistas
  6. Agregar cadena de conexión
  7. Personalización de tablas
+ 8. Modificacion de las vistas para la inserción
