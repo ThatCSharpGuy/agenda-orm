@@ -6,3 +6,4 @@
  4. Crear Database context
  5. Controllers y Vistas
  6. Agregar cadena de conexión
+ 7. Personalización de tablas
