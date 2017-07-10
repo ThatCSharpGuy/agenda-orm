@@ -5,3 +5,4 @@
  3. Agregar clases del modelo
  4. Crear Database context
  5. Controllers y Vistas
+ 6. Agregar cadena de conexión
