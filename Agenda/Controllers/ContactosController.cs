@@ -27,7 +27,7 @@ namespace Agenda.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contacto contacto = db.Contactos.Find(id);
+            Contacto contacto = db.Contactos.Include(c => c.Telefonos).First(c => c.Id == id);
             if (contacto == null)
             {
                 return HttpNotFound();
