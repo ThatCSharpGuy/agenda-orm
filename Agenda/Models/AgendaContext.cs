@@ -8,7 +8,7 @@ namespace Agenda.Models
 {
     public class AgendaContext : DbContext
     {
-        public AgendaContext(): base()
+        public AgendaContext(): base("ConnAgendaDb")
         {
 
         }
